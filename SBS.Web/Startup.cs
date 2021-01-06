@@ -4,11 +4,18 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using SBS.ApplicationCore.Interfaces.Repositories;
+using SBS.ApplicationCore.Interfaces.Services;
+using SBS.ApplicationCore.Services;
+using SBS.Infrastructure;
+using SBS.Infrastructure.Persistence;
+using SBS.Infrastructure.Repositories;
 
-namespace SBS.Web
+namespace SBS.WebUI
 {
     public class Startup
     {
@@ -23,6 +30,13 @@ namespace SBS.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddDbContext<ModelContext>(options => options.UseOracle(Configuration.GetConnectionString("ConexionSvr_Default")));
+
+            // Repositories
+            services.AddTransient<IUsuarioRepository, UsuarioRepository>();
+
+            // Service
+            services.AddTransient<IUsuarioService, UsuarioService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

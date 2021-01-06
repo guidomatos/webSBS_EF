@@ -7,19 +7,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C0A58EDC-862
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{9AAA8509-4132-4E43-A70E-AA7B8666E13B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SBS.FunctionalTests", "SBS.FunctionalTests\SBS.FunctionalTests.csproj", "{9725EFCA-61E4-4F72-91ED-09D26B31CE7F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SBS.FunctionalTests", "SBS.FunctionalTests\SBS.FunctionalTests.csproj", "{9725EFCA-61E4-4F72-91ED-09D26B31CE7F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SBS.IntegrationTests", "SBS.IntegrationTests\SBS.IntegrationTests.csproj", "{3A91B3FB-87F4-40CE-A47C-26A16AA423D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SBS.IntegrationTests", "SBS.IntegrationTests\SBS.IntegrationTests.csproj", "{3A91B3FB-87F4-40CE-A47C-26A16AA423D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SBS.UnitTests", "SBS.UnitTests\SBS.UnitTests.csproj", "{15637CE3-82F2-4652-BC61-222D2C9FD058}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SBS.UnitTests", "SBS.UnitTests\SBS.UnitTests.csproj", "{15637CE3-82F2-4652-BC61-222D2C9FD058}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SBS.Web", "SBS.Web\SBS.Web.csproj", "{ECFBCCF5-07D9-438A-ABF1-DFDAD17B0CB7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SBS.WebUI", "SBS.Web\SBS.WebUI.csproj", "{ECFBCCF5-07D9-438A-ABF1-DFDAD17B0CB7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SBS.ApplicationCore", "SBS.ApplicationCore\SBS.ApplicationCore.csproj", "{45C5EF53-DFFB-4594-BC54-CF77FF660FDB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SBS.ApplicationCore", "SBS.ApplicationCore\SBS.ApplicationCore.csproj", "{45C5EF53-DFFB-4594-BC54-CF77FF660FDB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SBS.Infrastructure", "SBS.Infrastructure\SBS.Infrastructure.csproj", "{4B9E8A91-BAE8-4BDC-B289-CE128E3D7036}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SBS.Utils", "SBS.Utils\SBS.Utils.csproj", "{CDD9AEBF-2D44-4F0C-B4E9-AF8BB039460B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SBS.Infrastructure", "SBS.Infrastructure\SBS.Infrastructure.csproj", "{4B9E8A91-BAE8-4BDC-B289-CE128E3D7036}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,10 +49,6 @@ Global
 		{4B9E8A91-BAE8-4BDC-B289-CE128E3D7036}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4B9E8A91-BAE8-4BDC-B289-CE128E3D7036}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4B9E8A91-BAE8-4BDC-B289-CE128E3D7036}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CDD9AEBF-2D44-4F0C-B4E9-AF8BB039460B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CDD9AEBF-2D44-4F0C-B4E9-AF8BB039460B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CDD9AEBF-2D44-4F0C-B4E9-AF8BB039460B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CDD9AEBF-2D44-4F0C-B4E9-AF8BB039460B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -66,7 +60,6 @@ Global
 		{ECFBCCF5-07D9-438A-ABF1-DFDAD17B0CB7} = {C0A58EDC-8626-4114-9681-E4B7479A7703}
 		{45C5EF53-DFFB-4594-BC54-CF77FF660FDB} = {C0A58EDC-8626-4114-9681-E4B7479A7703}
 		{4B9E8A91-BAE8-4BDC-B289-CE128E3D7036} = {C0A58EDC-8626-4114-9681-E4B7479A7703}
-		{CDD9AEBF-2D44-4F0C-B4E9-AF8BB039460B} = {C0A58EDC-8626-4114-9681-E4B7479A7703}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {80E97A0C-ED42-41B6-864E-422C71235507}

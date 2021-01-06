@@ -7,9 +7,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace SBS.Web
+namespace SBS.WebUI
 {
-    public class Program
+    public class Program    
     {
         public static void Main(string[] args)
         {

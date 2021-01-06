@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Usuario";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Usuario</h1>
+    <p>Usuario</p>
+</div>
+
+@section scripts{
+
+    <script type="text/javascript">
+
+        var urlBuscarUsuario = '@Url.Action("BuscarUsuario", "Usuario", new { area = "" })';
+        var urlGrabarUsuario = '@Url.Action("GrabarUsuario", "Usuario", new { area = "" })';
+        var urlEliminarUsuario = '@Url.Action("EliminarUsuario", "Usuario", new { area = "" })';
+
+    </script>
+
+    <script type="text/javascript" src="~/js/Usuario/Index.js"></script>
+}
