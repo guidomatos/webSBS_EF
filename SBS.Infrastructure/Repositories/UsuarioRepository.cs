@@ -45,6 +45,8 @@ namespace SBS.Infrastructure.Repositories
 
             try
             {
+                // Método sin transacción
+
                 var newId = _context.SbsUsuario.DefaultIfEmpty().Max(r => r == null ? 0 : r.Usuarioid) + 1;
 
                 var itemAdd = new SbsUsuario
@@ -67,6 +69,47 @@ namespace SBS.Infrastructure.Repositories
                 await _context.SaveChangesAsync();
 
                 result = itemAdd.Usuarioid;
+
+                // Método con transacción
+
+                /*
+                var newId = _context.SbsUsuario.DefaultIfEmpty().Max(r => r == null ? 0 : r.Usuarioid) + 1;
+
+                var itemAdd = new SbsUsuario
+                {
+                    Usuarioid = newId,
+                    Rolid = param.Rolid,
+                    Codigousuario = param.Codigousuario,
+                    Clavesecreta = param.Clavesecreta,
+                    Email = param.Email,
+                    Apellidopaterno = param.Apellidopaterno,
+                    Apellidomaterno = param.Apellidomaterno,
+                    Primernombre = param.Primernombre,
+                    Segundonombre = param.Segundonombre,
+                    Alias = param.Alias,
+                    Primeravezlogin = true,
+                    Activo = true
+                };
+
+                using (var dbContextTransaction = _context.Database.BeginTransaction())
+                {
+                    try
+                    {
+
+                        _context.SbsUsuario.Add(itemAdd);
+                        await _context.SaveChangesAsync();
+
+                        dbContextTransaction.Commit();
+
+                        result = itemAdd.Usuarioid;
+                    }
+                    catch (Exception)
+                    {
+                        dbContextTransaction.Rollback();
+                    }
+                }
+                */
+
             }
             catch (Exception ex)
             {
